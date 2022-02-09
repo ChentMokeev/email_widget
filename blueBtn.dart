@@ -10,13 +10,14 @@ class BlueButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 15),
         color: Colors.blue,
         height: 50,
         width: double.infinity,
         child: const Text(
           'Log in',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontSize: 16),
         ),
       ),
     );

@@ -15,11 +15,15 @@ class BottomBar extends StatelessWidget {
       child: RichText(
         text: const TextSpan(
           text: 'Don\'t have an account? ',
+          style: TextStyle(
+            fontSize: 16,
+          ),
           children: [
             TextSpan(
               text: 'Sign up',
               style: TextStyle(
                 color: Colors.blue,
+                fontSize: 16,
               ),
             ),
           ],
