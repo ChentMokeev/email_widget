@@ -1,3 +1,8 @@
+import 'package:first_app/email.dart';
+import 'package:first_app/bottomBar.dart';
+import 'package:first_app/blueBtn.dart';
+import 'package:first_app/password.dart';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -10,80 +15,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'First App',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Flutter demo app',
-            style: TextStyle(color: Colors.black),
-          ),
-          centerTitle: true,
-        ),
-        backgroundColor: Colors.cyan[300],
         body: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    color: Colors.red,
-                    padding: EdgeInsets.all(30),
-                    child: Text('1'),
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    padding: EdgeInsets.all(40),
-                    child: Text('2'),
-                  ),
-                  Container(
-                    color: Colors.green,
-                    padding: EdgeInsets.all(50),
-                    child: Text('3'),
-                  )
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    color: Colors.red,
-                    padding: EdgeInsets.all(30),
-                    child: Text('1'),
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    padding: EdgeInsets.all(40),
-                    child: Text('2'),
-                  ),
-                  Container(
-                    color: Colors.green,
-                    padding: EdgeInsets.all(50),
-                    child: Text('3'),
-                  )
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    color: Colors.red,
-                    padding: EdgeInsets.all(30),
-                    child: Text('1'),
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    padding: EdgeInsets.all(40),
-                    child: Text('2'),
-                  ),
-                  Container(
-                    color: Colors.green,
-                    padding: EdgeInsets.all(50),
-                    child: Text('3'),
-                  )
-                ],
-              ),
-            ],
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            padding: EdgeInsets.only(top: 25),
+            height: 400,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Email(),
+                Password(),
+                BlueButton(),
+                BottomBar(),
+              ],
+            ),
           ),
         ),
       ),
